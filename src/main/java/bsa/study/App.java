@@ -14,12 +14,21 @@ public class App {
                 number1, BinarySearch.find(numbers1, number1)));
 
         int[] numbers2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-        int number2 = 5;
+        int number2_1 = 5;
         System.out.println(String.format("Index of %d in array is %d",
-                number2, BinarySearch.find(numbers2, number2)));
+                number2_1, BinarySearch.find(numbers2, number2_1)));
 
-        int number3 = 15;
+        int number2_2 = 15;
         System.out.println(String.format("Index of %d in array is %d",
-                number3, BinarySearch.find(numbers2, number3)));
+                number2_2, BinarySearch.find(numbers2, number2_2)));
+
+        int[] numbers3 = new int[]{1};
+        int number3_1 = 1;
+        System.out.println(String.format("Index of %d in array is %d",
+                number3_1, BinarySearch.find(numbers3, number3_1)));
+
+        int number3_2 = 2;
+        System.out.println(String.format("Index of %d in array is %d",
+                number3_2, BinarySearch.find(numbers3, number3_2)));
     }
 }
