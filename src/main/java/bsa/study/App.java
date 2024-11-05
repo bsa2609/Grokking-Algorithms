@@ -49,7 +49,7 @@ public class App {
         int[] numbers11Sorted = SelectionSort.sort(numbers11);
         System.out.println("Sorted array: " + Arrays.toString(numbers11Sorted));
 
-        int[] numbers12 = new int[]{-50, 30, -20, 20, 10, 0, 100};
+        int[] numbers12 = new int[]{-50, 30, 0, -20, 0, 20, 10, 0, 100};
         System.out.println("Unsorted array: " + Arrays.toString(numbers12));
 
         int[] numbers12Sorted = SelectionSort.sort(numbers12);

@@ -9,9 +9,15 @@ public class SelectionSort {
         LinkedList<Integer> copiedNumbers = copyArrayToLinkedList(numbers);
 
         for (int i = 0; i < numbers.length; i++) {
+            /*
+            // code from the book
             int smallestIndex = findSmallest(copiedNumbers);
             sortedNumbers[i] = copiedNumbers.get(smallestIndex);
             copiedNumbers.remove(smallestIndex);
+             */
+            Integer smallest = findSmallest(copiedNumbers);
+            sortedNumbers[i] = smallest;
+            copiedNumbers.removeLastOccurrence(smallest);
         }
 
         return sortedNumbers;
@@ -27,6 +33,8 @@ public class SelectionSort {
         return copiedNumbers;
     }
 
+    /*
+    // code from the book
     private static int findSmallest(LinkedList<Integer> numbers) {
         int smallest = numbers.getFirst();
         int smallestIndex = 0;
@@ -41,5 +49,18 @@ public class SelectionSort {
         }
 
         return smallestIndex;
+    }
+     */
+
+    private static Integer findSmallest(LinkedList<Integer> numbers) {
+        int smallest = numbers.getFirst();
+
+        for (Integer number : numbers) {
+            if (number < smallest) {
+                smallest = number;
+            }
+        }
+
+        return smallest;
     }
 }
