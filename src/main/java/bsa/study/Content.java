@@ -6,6 +6,7 @@ import bsa.study.chapter3.BinarySearchRecursively;
 import bsa.study.chapter3.Countdown;
 import bsa.study.chapter3.Factorial;
 import bsa.study.chapter3.MaxElementOfArray;
+import bsa.study.chapter3.QuickSort;
 import bsa.study.chapter3.SumOfElementsOfArray;
 
 import java.util.Arrays;
@@ -68,15 +69,15 @@ public class Content {
         Countdown.count(5);
 
         int i = 5;
-        System.out.printf("Calculate factorial: %d\n", i);
+        System.out.printf("Calculate factorial: %d%n", i);
         System.out.println(Factorial.calculate(i));
 
         int[] numbers1 = Utils.getArrayWithRandomInt(5, 1, 10);
-        System.out.printf("Calculate sum of elements of array: %s\n", Arrays.toString(numbers1));
+        System.out.printf("Calculate sum of elements of array: %s%n", Arrays.toString(numbers1));
         System.out.println(SumOfElementsOfArray.calculate(numbers1));
 
         int[] numbers2 = Utils.getArrayWithRandomInt(15, 1, 50);
-        System.out.printf("Find maximum element of array: %s\n", Arrays.toString(numbers2));
+        System.out.printf("Find maximum element of array: %s%n", Arrays.toString(numbers2));
         System.out.println(MaxElementOfArray.find(numbers2));
 
         int[] numbers3 = SelectionSort.sort(Utils.getArrayWithRandomInt(15, 1, 50));
@@ -84,5 +85,19 @@ public class Content {
         System.out.printf("Index of %d in array %s%n", item, Arrays.toString(numbers3));
         System.out.println(BinarySearchRecursively.findUsingSubArrays(numbers3, item));
         System.out.println(BinarySearchRecursively.findUsingIndexes(numbers3, item));
+
+        System.out.println("Quick sort");
+        int[] numbers4 = Utils.getArrayWithRandomInt(20, 1, 50);
+        System.out.printf("Unsorted array: %s%n", Arrays.toString(numbers4));
+        System.out.printf("Sorted array (pivot is first element): %s%n",
+                Arrays.toString(QuickSort.sortPivotIsFirstElement(numbers4)));
+        System.out.printf("Sorted array (pivot is random element): %s%n",
+                Arrays.toString(QuickSort.sortPivotIsRandomElement(numbers4)));
+
+        System.out.println("Quick sort without sub arrays");
+        int[] numbers5 = Utils.getArrayWithRandomInt(30, 1, 100);
+        System.out.printf("Unsorted array: %s%n", Arrays.toString(numbers5));
+        QuickSort.sort(numbers5);
+        System.out.printf("Sorted array: %s%n", Arrays.toString(numbers5));
     }
 }
