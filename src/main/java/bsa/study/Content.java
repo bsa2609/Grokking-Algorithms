@@ -82,6 +82,7 @@ public class Content {
         int[] numbers3 = SelectionSort.sort(Utils.getArrayWithRandomInt(15, 1, 50));
         int item = Utils.getRandomInt(1, 50);
         System.out.printf("Index of %d in array %s%n", item, Arrays.toString(numbers3));
-        System.out.println(BinarySearchRecursively.find(numbers3, item));
+        System.out.println(BinarySearchRecursively.findUsingSubArrays(numbers3, item));
+        System.out.println(BinarySearchRecursively.findUsingIndexes(numbers3, item));
     }
 }
