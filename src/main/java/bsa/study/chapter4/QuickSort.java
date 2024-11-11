@@ -1,4 +1,4 @@
-package bsa.study.chapter3;
+package bsa.study.chapter4;
 
 import bsa.study.Utils;
 

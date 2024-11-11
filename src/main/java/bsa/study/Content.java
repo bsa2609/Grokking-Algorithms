@@ -6,8 +6,9 @@ import bsa.study.chapter3.BinarySearchRecursively;
 import bsa.study.chapter3.Countdown;
 import bsa.study.chapter3.Factorial;
 import bsa.study.chapter3.MaxElementOfArray;
-import bsa.study.chapter3.QuickSort;
+import bsa.study.chapter4.QuickSort;
 import bsa.study.chapter3.SumOfElementsOfArray;
+import bsa.study.chapter5.HashTable;
 
 import java.util.Arrays;
 
@@ -24,22 +25,22 @@ public class Content {
                 number1, BinarySearch.find(numbers1, number1));
 
         int[] numbers2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-        int number2_1 = 5;
+        int number2v1 = 5;
         System.out.printf("Index of %d in array is %d%n",
-                number2_1, BinarySearch.find(numbers2, number2_1));
+                number2v1, BinarySearch.find(numbers2, number2v1));
 
-        int number2_2 = 15;
+        int number2v2 = 15;
         System.out.printf("Index of %d in array is %d%n",
-                number2_2, BinarySearch.find(numbers2, number2_2));
+                number2v2, BinarySearch.find(numbers2, number2v2));
 
         int[] numbers3 = new int[]{1};
-        int number3_1 = 1;
+        int number3v1 = 1;
         System.out.printf("Index of %d in array is %d%n",
-                number3_1, BinarySearch.find(numbers3, number3_1));
+                number3v1, BinarySearch.find(numbers3, number3v1));
 
-        int number3_2 = 2;
+        int number3v2 = 2;
         System.out.printf("Index of %d in array is %d%n",
-                number3_2, BinarySearch.find(numbers3, number3_2));
+                number3v2, BinarySearch.find(numbers3, number3v2));
     }
 
     public static void chapter2() {
@@ -85,7 +86,12 @@ public class Content {
         System.out.printf("Index of %d in array %s%n", item, Arrays.toString(numbers3));
         System.out.println(BinarySearchRecursively.findUsingSubArrays(numbers3, item));
         System.out.println(BinarySearchRecursively.findUsingIndexes(numbers3, item));
+    }
 
+    public static void chapter4() {
+        System.out.println("Chapter 4");
+
+        // Quick sort
         System.out.println("Quick sort");
         int[] numbers4 = Utils.getArrayWithRandomInt(20, 1, 50);
         System.out.printf("Unsorted array: %s%n", Arrays.toString(numbers4));
@@ -99,5 +105,46 @@ public class Content {
         System.out.printf("Unsorted array: %s%n", Arrays.toString(numbers5));
         QuickSort.sort(numbers5);
         System.out.printf("Sorted array: %s%n", Arrays.toString(numbers5));
+    }
+
+    public static void chapter5() {
+        System.out.println("Chapter 5");
+
+        // hash table
+        System.out.println("Hash table");
+
+        HashTable hashTable = new HashTable();
+        System.out.printf("size = %s%n", hashTable.size());
+        System.out.printf("hash table: %s%n", hashTable.toString());
+
+        hashTable.put("apple", 10);
+        System.out.printf("size = %s%n", hashTable.size());
+        System.out.printf("hash table: %s%n", hashTable.toString());
+
+        hashTable.put("banana", 12);
+        hashTable.put("tomato", 8);
+        hashTable.put("potato", 5);
+        hashTable.put("strawberry", 11);
+        hashTable.put("orange", 9);
+        hashTable.put("plum", 7);
+        hashTable.put("cherry", 14);
+
+        System.out.printf("size = %s%n", hashTable.size());
+        System.out.printf("hash table: %s%n", hashTable.toString());
+        System.out.printf("plum = %s%n", hashTable.get("plum"));
+        System.out.printf("cherry = %s%n", hashTable.get("cherry"));
+
+        hashTable.put("plum", 16);
+        hashTable.put("cherry", 17);
+
+        System.out.printf("size = %s%n", hashTable.size());
+        System.out.printf("hash table: %s%n", hashTable.toString());
+        System.out.printf("plum = %s%n", hashTable.get("plum"));
+        System.out.printf("cherry = %s%n", hashTable.get("cherry"));
+
+        hashTable.delete("orange");
+
+        System.out.printf("size = %s%n", hashTable.size());
+        System.out.printf("hash table: %s%n", hashTable.toString());
     }
 }

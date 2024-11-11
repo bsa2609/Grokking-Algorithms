@@ -3,7 +3,7 @@ package bsa.study.chapter3;
 import bsa.study.Utils;
 
 public class BinarySearchRecursively {
-    public static Integer findUsingSubArrays (int[] numbers, int item) {
+    public static Integer findUsingSubArrays(int[] numbers, int item) {
         if (numbers.length == 1) {
             return numbers[0] == item ? 0 : null;
 
