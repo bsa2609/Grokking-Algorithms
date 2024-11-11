@@ -4,31 +4,21 @@
 Code examples from the book "Grokking Algorithms" on java.
 
 ## Chapter 1
-```
-Binary search
-```
+ - [Binary search](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter1/BinarySearch.java)
+
 
 ## Chapter 2
-```
-Selection sort
-```
+ - [Selection sort](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter2/SelectionSort.java)
 
 ## Chapter 3
-```
-Recursion
-Countdown
-Factorial
-Sum of elements of array
-Maximum element of array
-Binary Search recursively
-```
+ - [Countdown](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter3/Countdown.java)
+ - [Factorial](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter3/Factorial.java)
+ - [Sum of elements of array](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter3/SumOfElementsOfArray.java)
+ - [Maximum element of array](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter3/MaxElementOfArray.java)
+ - [Binary Search recursively](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter3/BinarySearchRecursively.java)
 
 ## Chapter 4
-```
-Quick sort
-```
+ - [Quick sort](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter4/QuickSort.java)
 
 ## Chapter 5
-```
-Hash table
-```
+ - [Hash table](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter5/HashTable.java)
