@@ -26,6 +26,10 @@ public class Queue<T> {
     }
 
     public T pop() {
+        if(isEmpty()) {
+            return null;
+        }
+
         ElementOfQueue<T> headElement = head;
 
         head = headElement.getNextElement();
