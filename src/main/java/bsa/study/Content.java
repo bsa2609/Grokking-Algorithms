@@ -9,6 +9,7 @@ import bsa.study.chapter3.MaxElementOfArray;
 import bsa.study.chapter4.QuickSort;
 import bsa.study.chapter3.SumOfElementsOfArray;
 import bsa.study.chapter5.HashTable;
+import bsa.study.chapter6.Queue;
 
 import java.util.Arrays;
 
@@ -147,4 +148,45 @@ public class Content {
         System.out.printf("size = %s%n", hashTable.size());
         System.out.printf("hash table: %s%n", hashTable.toString());
     }
+
+    public static void chapter6() {
+        System.out.println("Chapter 6");
+
+        // Queue
+        System.out.println("Queue");
+
+        Queue<String> queue = new Queue<>();
+        System.out.println("is empty: " + queue.isEmpty());
+        System.out.println(queue);
+
+        queue.put("one");
+
+        System.out.println("is empty: " + queue.isEmpty());
+        System.out.println(queue);
+
+        queue.put("two");
+        queue.put("three");
+
+        System.out.println(queue);
+
+        System.out.println("pop: " + queue.pop());
+
+        System.out.println(queue);
+
+        queue.put("four");
+
+        System.out.println(queue);
+
+        System.out.println("pop: " + queue.pop());
+
+        System.out.println(queue);
+
+        System.out.println("pop: " + queue.pop());
+
+        System.out.println("pop: " + queue.pop());
+
+        System.out.println("is empty: " + queue.isEmpty());
+        System.out.println(queue);
+    }
+
 }
