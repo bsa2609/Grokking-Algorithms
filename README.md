@@ -24,4 +24,6 @@ Code examples from the book "Grokking Algorithms" on java.
  - [Hash table](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter5/HashTable.java)
 
 ## Chapter 6
- - [Queue](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter6/Queue.java)
+ - [Queue](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter6/Queue/Queue.java)
+ - [Graph](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter6/Graph/Graph.java)
+ - [Breadth-first search](https://github.com/bsa2609/Grokking-Algorithms/blob/main/src/main/java/bsa/study/chapter6/BreadthFirstSearch.java)
