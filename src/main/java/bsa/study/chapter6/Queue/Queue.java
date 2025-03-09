@@ -1,4 +1,4 @@
-package bsa.study.chapter6;
+package bsa.study.chapter6.Queue;
 
 public class Queue<T> {
     private ElementOfQueue<T> head;
@@ -19,6 +19,7 @@ public class Queue<T> {
         if (isEmpty()) {
             head = elementOfQueue;
             end = elementOfQueue;
+
         } else {
             end.setNextElement(elementOfQueue);
             end = elementOfQueue;
@@ -26,7 +27,7 @@ public class Queue<T> {
     }
 
     public T pop() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             return null;
         }
 

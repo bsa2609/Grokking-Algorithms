@@ -1,4 +1,4 @@
-package bsa.study.chapter6;
+package bsa.study.chapter6.Queue;
 
 public class ElementOfQueue<T> {
     private final T value;

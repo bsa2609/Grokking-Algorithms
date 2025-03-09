@@ -9,7 +9,9 @@ import bsa.study.chapter3.MaxElementOfArray;
 import bsa.study.chapter4.QuickSort;
 import bsa.study.chapter3.SumOfElementsOfArray;
 import bsa.study.chapter5.HashTable;
-import bsa.study.chapter6.Queue;
+import bsa.study.chapter6.BreadthFirstSearch;
+import bsa.study.chapter6.Graph.Graph;
+import bsa.study.chapter6.Graph.Node;
 
 import java.util.Arrays;
 
@@ -153,6 +155,7 @@ public class Content {
         System.out.println("Chapter 6");
 
         // Queue
+        /*
         System.out.println("Queue");
 
         Queue<String> queue = new Queue<>();
@@ -160,33 +163,67 @@ public class Content {
         System.out.println(queue);
 
         queue.put("one");
-
         System.out.println("is empty: " + queue.isEmpty());
         System.out.println(queue);
 
         queue.put("two");
         queue.put("three");
-
         System.out.println(queue);
 
         System.out.println("pop: " + queue.pop());
-
         System.out.println(queue);
 
         queue.put("four");
-
         System.out.println(queue);
 
         System.out.println("pop: " + queue.pop());
-
         System.out.println(queue);
-
         System.out.println("pop: " + queue.pop());
-
         System.out.println("pop: " + queue.pop());
-
         System.out.println("is empty: " + queue.isEmpty());
         System.out.println(queue);
+         */
+
+        //BreadthFirstSearch
+        try {
+            Graph<String> graph = new Graph<>("I", false);
+            graph.addNode("Bob", false);
+            graph.addNode("Alice", false);
+            graph.addNode("Clare", false);
+
+            graph.addEdge("I", "Bob");
+            graph.addEdge("I", "Alice");
+            graph.addEdge("I", "Clare");
+
+            graph.addNode("Anudge", false);
+
+            graph.addEdge("Bob", "Anudge");
+
+            graph.addNode("Peggi", true);
+
+            graph.addEdge("Bob", "Peggi");
+            graph.addEdge("Alice", "Peggi");
+
+            graph.addNode("Tom", false);
+            graph.addNode("Johnny", false);
+
+            graph.addEdge("Clare", "Tom");
+            graph.addEdge("Clare", "Johnny");
+
+            graph.addNode("Piter", true);
+
+            graph.addEdge("Johnny", "Piter");
+
+            Node<String> nearestSeller = BreadthFirstSearch.findNearestSeller(graph);
+
+            if (nearestSeller == null) {
+                System.out.println("Seller not found");
+            } else {
+                System.out.println("Seller is " + nearestSeller.getValue());
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
